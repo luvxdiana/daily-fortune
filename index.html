@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Fortune</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page" id="page">
+      <div class="background-glow"></div>
+
+      <div class="language-picker" id="languagePicker">
+        <button
+          class="language-cloud"
+          id="languageToggle"
+          type="button"
+          aria-label="Choose language"
+          aria-expanded="false"
+          aria-controls="languageMenu"
+        >
+          <img src="assets/cloud.png" alt="" />
+          <span class="language-code" id="languageCode">EN</span>
+        </button>
+        <div class="language-menu" id="languageMenu" hidden>
+          <button
+            type="button"
+            class="language-option"
+            data-language="en"
+            lang="en"
+          >
+            EN · English
+          </button>
+          <button
+            type="button"
+            class="language-option"
+            data-language="uk"
+            lang="uk"
+          >
+            UA · Українська
+          </button>
+          <button
+            type="button"
+            class="language-option"
+            data-language="no"
+            lang="nb"
+          >
+            NO · Norsk
+          </button>
+        </div>
+      </div>
+
+      <header class="hero">
+        <img class="logo" src="assets/logo.png" alt="Daily Fortune" />
+        <p class="subtitle" id="subtitle">
+          A little fortune for a brighter you
+        </p>
+      </header>
+
+      <main class="fortune-area">
+        <button
+          class="envelope-button"
+          id="envelopeButton"
+          type="button"
+          aria-label="Open your fortune"
+        >
+          <div class="envelope" id="envelope">
+            <div class="letter" id="letter">
+              <div class="paper">
+                <p class="paper-label" id="paperLabel">Today's message</p>
+                <p class="fortune-text" id="fortuneText">
+                  Tap the envelope to reveal your fortune.
+                </p>
+              </div>
+            </div>
+
+            <div class="envelope-back"></div>
+            <div class="envelope-left"></div>
+            <div class="envelope-right"></div>
+            <div class="envelope-bottom"></div>
+            <div class="envelope-flap"></div>
+
+            <div class="seal">
+              <img src="assets/cloud.png" alt="" />
+            </div>
+
+            <div class="stamp stamp-moon">☾</div>
+            <div class="stamp stamp-heart">♥</div>
+          </div>
+        </button>
+
+        <button class="action-button" id="actionButton" type="button">
+          <span id="actionIcon">✦</span>
+          <span id="actionLabel">Open your fortune</span>
+          <span id="actionArrow">→</span>
+        </button>
+
+        <p class="helper-text" id="helperText">
+          Kind words. Brighter days. Every day.
+        </p>
+
+        <section class="timer-card" id="timerCard" hidden>
+          <p class="timer-title" id="timerTitle">
+            Your next fortune unlocks in
+          </p>
+          <p class="timer-value" id="timerValue">00:00:00</p>
+          <p class="timer-note" id="timerNote">
+            New message every day at midnight.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
