@@ -243,3 +243,13 @@ envelopeButton.addEventListener("click", openFortune);
 actionButton.addEventListener("click", openFortune);
 updateLanguageUI();
 renderFortune();
+
+// Service Worker
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Service Worker error:", error);
+    });
+  });
+}
